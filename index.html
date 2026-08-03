@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Under The Tulip Sky</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="moon" id="moon" aria-hidden="true"></div>
+    <div class="star-field" id="starField" aria-hidden="true"></div>
+    <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+    <div class="shooting-star" id="shootingStar" aria-hidden="true"></div>
+  </div>
+
+  <!-- Page wrapper -->
+  <main class="app">
+
+    <!-- PAGE 1: Opening -->
+    <section class="page page-opening active" id="page1" aria-labelledby="openingTitle">
+      <div class="card glass">
+        <h1 id="openingTitle" class="opening-title">A Little Surprise... 🤍</h1>
+        <p class="opening-sub">Some feelings are too beautiful to stay hidden.</p>
+
+        <label class="password-label" for="passwordInput">Secret code</label>
+        <div class="pw-row">
+          <input id="passwordInput" class="password" type="password" inputmode="numeric" maxlength="10" autocomplete="off" placeholder="••••" aria-label="Password"/>
+          <button id="openBtn" class="btn primary">Open It 🌙</button>
+        </div>
+        <p class="hint" id="hint" aria-live="polite"></p>
+      </div>
+      <footer class="credit">Under The Tulip Sky — Aaru</footer>
+    </section>
+
+    <!-- PAGE 2: Letter -->
+    <section class="page page-letter" id="page2" aria-labelledby="letterTitle" hidden>
+      <div class="card glass letter-card">
+        <h2 id="letterTitle" class="letter-heading">🫀 A Little Note for Someone Special 🤍</h2>
+
+        <div id="letterContent" class="letter-content" aria-live="polite"></div>
+
+        <div class="letter-actions">
+          <button id="nextBtn" class="btn outline" hidden>Can I Show You One Last Thing...? 🌙</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: Finale -->
+    <section class="page page-finale" id="page3" aria-labelledby="finaleTitle" hidden>
+      <div class="card glass finale-card">
+        <div class="finale-messages">
+          <p class="small-line">Every flower blooms for someone... 🌷🌹</p>
+          <p class="small-line">Mine bloomed for you.</p>
+          <p class="small-line">You finally reached the most beautiful part of my little surprise... 🤍</p>
+
+          <h1 class="big-declaration">❤️ I LIKE YOU ❤️</h1>
+
+          <p class="signature">— Aaru 🫀🌷</p>
+        </div>
+
+        <div class="flower-scene" id="flowerScene" aria-hidden="true">
+          <!-- Inline SVG flowers that will bloom with CSS + JS triggers -->
+          <svg class="flower tulip tulip-1" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g class="stem"><rect x="58" y="70" width="4" height="70" rx="2" fill="#1b5e20"/></g>
+            <g class="bloom">
+              <path d="M60 68 C44 68 30 48 36 34 C48 10 72 8 84 34 C90 48 76 68 60 68 Z" fill="#ff6b9a"/>
+              <ellipse cx="60" cy="48" rx="12" ry="16" fill="#ff98b6" opacity="0.9"/>
+            </g>
+          </svg>
+
+          <svg class="flower rose rose-1" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g class="stem"><rect x="58" y="70" width="4" height="70" rx="2" fill="#1b5e20"/></g>
+            <g class="bloom">
+              <circle cx="60" cy="44" r="18" fill="#d0416b"/>
+              <path d="M60 36 q10 8 0 16 q-10 8 0 16" fill="#ff7aa0" opacity="0.9"/>
+            </g>
+          </svg>
+
+          <!-- Additional duplicates for dramatic effect -->
+          <svg class="flower tulip tulip-2" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g class="stem"><rect x="58" y="70" width="4" height="70" rx="2" fill="#1b5e20"/></g>
+            <g class="bloom">
+              <path d="M60 68 C44 68 30 48 36 34 C48 10 72 8 84 34 C90 48 76 68 60 68 Z" fill="#ff8fb0"/>
+              <ellipse cx="60" cy="48" rx="12" ry="16" fill="#ffc0d1" opacity="0.95"/>
+            </g>
+          </svg>
+
+          <svg class="flower rose rose-2" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g class="stem"><rect x="58" y="70" width="4" height="70" rx="2" fill="#1b5e20"/></g>
+            <g class="bloom">
+              <circle cx="60" cy="44" r="18" fill="#ff406a"/>
+              <path d="M60 36 q10 8 0 16 q-10 8 0 16" fill="#ff8cae" opacity="0.9"/>
+            </g>
+          </svg>
+
+          <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+  </html>
